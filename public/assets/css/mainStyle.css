@@ -1,0 +1,14 @@
+.courses
+{
+    transition: all 2s linear;
+    display: block;
+}
+.hidden
+{
+    display: none;
+    opacity: 0;
+}
+.buttonShow {
+    display: block;
+    margin: 0 auto;
+  }
