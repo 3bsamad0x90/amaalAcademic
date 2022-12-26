@@ -1,12 +1,12 @@
 <script>
     function confirmDelete(url,id) {
         Swal.fire({
-            title: '{{trans("common.Are you sure?")}}',
-            text: "{{trans('common.You wont be able to revert this!')}}",
+            title: 'هل أنت متأكد؟',
+            text: 'لن تستطيع استعادة تلك البيانات مرة أخرى',
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonText: '{{trans("common.Yes, delete it!")}}',
-            cancelButtonText: '{{trans("common.Cancel")}}',
+            confirmButtonText: 'نعم، احذف!',
+            cancelButtonText: 'إلغاء',
             customClass: {
             confirmButton: 'btn btn-primary',
             cancelButton: 'btn btn-outline-danger ms-1'
@@ -22,8 +22,8 @@
                         if(data != "false"){
                             Swal.fire({
                                 icon: 'success',
-                                title: '{{trans("common.Deleted!")}}',
-                                text: '{{trans("common.Your file has been deleted.")}}',
+                                title: 'تم الحذف بنجاح',
+                                text: 'لقد قام النظام بحذف كافة البيانات بنجاح',
                                 customClass: {
                                 confirmButton: 'btn btn-success'
                                 }
@@ -33,8 +33,8 @@
                         }else{
                             Swal.fire({
                                 icon: 'error',
-                                title: '{{trans("common.NotDeleted!")}}',
-                                text: '{{trans("common.Your file has not been deleted.")}}',
+                                title: 'لم يتم الحذف',
+                                text: 'لم ننجح في حذف البيانات يرجى التواصل مع الدعم الفني',
                                 customClass: {
                                 confirmButton: 'btn btn-success'
                                 }
