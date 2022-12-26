@@ -31,10 +31,11 @@
                         <div class="footer_social mt-45">
                             <h4 class="footer_title">{{ trans('common.followUs') }}</h4>
                             <ul class="social">
-                                <li><a href="{{ getSettingValue('facebook') }}"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="{{ getSettingValue('twitter') }}"><i class="lni lni-twitter-original"></i></a></li>
+                                <li><a href="{{ getSettingValue('facebook')  }}"><i class="lni lni-facebook-filled"></i></a></li>
+                                <li><a href="{{ getSettingValue('twitter')   }}"><i class="lni lni-twitter-original"></i></a></li>
                                 <li><a href="{{ getSettingValue('instagram') }}"><i class="lni lni-instagram-original"></i></a></li>
-                                <li><a href="{{ getSettingValue('linkedin') }}"><i class="lni lni-linkedin-original"></i></a></li>
+                                <li><a href="{{ getSettingValue('whatsapp') }}"><i  class="lni lni-whatsapp"></i></a></li>
+                                <li><a href="{{ getSettingValue('linkedin')  }}"><i class="lni lni-linkedin-original"></i></a></li>
                             </ul>
                         </div> <!-- footer info -->
                     </div> <!-- footer info -->

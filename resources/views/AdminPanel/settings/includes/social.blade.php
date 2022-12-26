@@ -16,4 +16,12 @@
         <label class="form-label" for="youtube">يوتيوب</label>
         {{Form::text('youtube',getSettingValue('youtube'),['id'=>'youtube','class'=>'form-control'])}}
     </div>
+    <div class="col-12 col-md-6">
+        <label class="form-label" for="whatsapp">واتساب</label>
+        {{Form::text('whatsapp',getSettingValue('whatsapp'),['id'=>'whatsapp','class'=>'form-control'])}}
+    </div>
+    <div class="col-12 col-md-6">
+        <label class="form-label" for="linkedin">لينكدأن</label>
+        {{Form::text('linkedin',getSettingValue('linkedin'),['id'=>'linkedin','class'=>'form-control'])}}
+    </div>
 </div>
