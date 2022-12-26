@@ -8,9 +8,9 @@
     <ul class="dropdown-menu dropdown-menu-media dropdown-menu-end">
         <li class="dropdown-menu-header">
             <div class="dropdown-header d-flex">
-                <h4 class="notification-title mb-0 me-auto">{{trans('common.Notifications')}}</h4>
+                <h4 class="notification-title mb-0 me-auto">الإشعارات</h4>
                 @if(Auth::user()->unreadnotifications->count() > 0)
-                    <div class="badge rounded-pill badge-light-primary">{{Auth::user()->unreadnotifications->count()}} {{trans('common.New')}}</div>
+                    <div class="badge rounded-pill badge-light-primary">{{Auth::user()->unreadnotifications->count()}} جديد</div>
                 @endif
             </div>
         </li>
@@ -38,12 +38,12 @@
                 @endforeach
             @else
                 <div class="p-1 text-center">
-                    <b>{{trans('common.nothingToView')}}</b>
+                    <b>لا يوجد أي بيانات لعرضها الآن</b>
                 </div>
             @endif
         </li>
         <li class="dropdown-menu-footer">
-            <a class="btn btn-primary w-100" href="{{route('admin.notifications.readAll')}}">{{trans('common.Read all notifications')}}</a>
+            <a class="btn btn-primary w-100" href="{{route('admin.notifications.readAll')}}">تحديد الكل كمقروء</a>
         </li>
     </ul>
 </li>

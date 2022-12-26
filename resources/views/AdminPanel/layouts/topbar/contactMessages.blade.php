@@ -15,9 +15,9 @@
     <ul class="dropdown-menu dropdown-menu-media dropdown-menu-end">
         <li class="dropdown-menu-header">
             <div class="dropdown-header d-flex">
-                <h4 class="notification-title mb-0 me-auto">{{trans('common.contactMessages')}}</h4>
+                <h4 class="notification-title mb-0 me-auto">رسائل اتصل بنا</h4>
                 @if($countUnreadMessage != 0)
-                    <div class="badge rounded-pill badge-light-primary">{{$countUnreadMessage}} {{trans('common.unread')}}</div>
+                    <div class="badge rounded-pill badge-light-primary">{{$countUnreadMessage}} غير مقروء</div>
                 @endif
             </div>
         </li>
@@ -39,6 +39,6 @@
 
             @endforelse
         </li>
-        <li class="dropdown-menu-footer"><a class="btn btn-primary w-100" href="#">Read all notifications</a></li>
+        <li class="dropdown-menu-footer"><a class="btn btn-primary w-100" href="#">تحديد الكل كمقروء</a></li>
     </ul>
 </li>
