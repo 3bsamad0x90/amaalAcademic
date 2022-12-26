@@ -19,9 +19,9 @@
                     <table class="table table-bordered mb-2">
                         <thead>
                             <tr>
-                                <th class="text-center">{{ trans('common.title') }}</th>
-                                <th class="text-center">{{ trans('common.photo') }}</th>
-                                <th class="text-center">{{ trans('common.actions') }}</th>
+                                <th class="text-center">العنوان</th>
+                                <th class="text-center">الصورة</th>
+                                <th class="text-center">الإجراءات</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,7 +50,7 @@
                             @empty
                                 <tr>
                                     <td colspan="5" class="p-3 text-center ">
-                                        <h2>{{trans('common.nothingToView')}}</h2>
+                                        <h2>لا يوجد أي بيانات لعرضها الآن</h2>
                                     </td>
                                 </tr>
                             @endforelse
@@ -67,20 +67,20 @@
                                 </div>
                                 <div class="modal-body pb-5 px-sm-5 pt-50">
                                     <div class="text-center mb-2">
-                                        <h1 class="mb-1">{{trans('common.edit')}}</h1>
+                                        <h1 class="mb-1">تعديل</h1>
                                     </div>
                                     {{Form::open(['files'=> true,'url'=>route('admin.reviews.update',['id'=>$review->id]), 'id'=>'editreviewForm', 'class'=>'row gy-1 pt-75'])}}
 
                                     <div class="col-12 col-md-6">
-                                        <label class="form-label" for="title_ar">{{trans('common.title_ar')}}</label>
+                                        <label class="form-label" for="title_ar">العنوان بالعربية</label>
                                         {{Form::text('title_ar',$review->title_ar,['id'=>'title_ar', 'class'=>'form-control','required'])}}
                                     </div>
                                     <div class="col-12 col-md-6">
-                                        <label class="form-label" for="title_en">{{trans('common.title_en')}}</label>
+                                        <label class="form-label" for="title_en">العنوان بالإنجليزية</label>
                                         {{Form::text('title_en',$review->title_en,['id'=>'title_en', 'class'=>'form-control'])}}
                                     </div>
                                     <div class="col-12 col-md-12">
-                                        <label class="form-label" for="photo">{{trans('common.photo')}}</label>
+                                        <label class="form-label" for="photo">الصورة</label>
                                         {{Form::file('photo',['id'=>'photo', 'class'=>'form-control','required'])}}
                                         @if($errors->has('photo'))
                                             <span class="text-danger" role="alert">
@@ -90,9 +90,9 @@
                                     </div>
 
                                     <div class="col-12 text-center mt-2 pt-50">
-                                        <button type="submit" class="btn btn-primary me-1">{{trans('common.Save changes')}}</button>
+                                        <button type="submit" class="btn btn-primary me-1"> حفظ البيانات</button>
                                         <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">
-                                            {{trans('common.Cancel')}}
+                                            إلغاء
                                         </button>
                                     </div>
 
@@ -119,7 +119,7 @@
 
 @section('page_buttons')
     <a href="javascript:;" data-bs-target="#createreview" data-bs-toggle="modal" class="btn btn-primary">
-        {{trans('common.CreateNew')}}
+        إضافة جديد
     </a>
 {{-- Create New review  --}}
     <div class="modal fade text-md-start" id="createreview" tabindex="-1" aria-hidden="true">
@@ -130,11 +130,11 @@
                 </div>
                 <div class="modal-body pb-5 px-sm-5 pt-50">
                     <div class="text-center mb-2">
-                        <h1 class="mb-1">{{trans('common.CreateNew')}}</h1>
+                        <h1 class="mb-1">إضافة جديد</h1>
                     </div>
                     {{Form::open(['files'=> true,'url'=>route('admin.reviews.store'), 'id'=>'createreviewForm', 'class'=>'row gy-1 pt-75'])}}
                         <div class="col-12 col-md-6">
-                            <label class="form-label" for="title_ar">{{trans('common.title_ar')}}</label>
+                            <label class="form-label" for="title_ar">العنوان بالعربية</label>
                             {{Form::text('title_ar','',['id'=>'title_ar', 'class'=>'form-control','required'])}}
                             @if($errors->has('title_ar'))
                                 <span class="text-danger" role="alert">
@@ -143,7 +143,7 @@
                             @endif
                         </div>
                         <div class="col-12 col-md-6">
-                            <label class="form-label" for="title_en">{{trans('common.title_en')}}</label>
+                            <label class="form-label" for="title_en">العنوان بالإنجليزية</label>
                             {{Form::text('title_en','',['id'=>'title_en', 'class'=>'form-control'])}}
                             @if($errors->has('title_en'))
                                 <span class="text-danger" role="alert">
@@ -153,7 +153,7 @@
                         </div>
 
                         <div class="col-12 col-md-12">
-                            <label class="form-label" for="photo">{{trans('common.photo')}}</label>
+                            <label class="form-label" for="photo">الصورة</label>
                             {{Form::file('photo',['id'=>'photo', 'class'=>'form-control','required'])}}
                             @if($errors->has('photo'))
                                 <span class="text-danger" role="alert">
@@ -163,9 +163,9 @@
                         </div>
 
                         <div class="col-12 text-center mt-2 pt-50">
-                            <button type="submit" class="btn btn-primary me-1">{{trans('common.Save changes')}}</button>
+                            <button type="submit" class="btn btn-primary me-1"> حفظ البيانات</button>
                             <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">
-                                {{trans('common.Cancel')}}
+                                إالغاء
                             </button>
                         </div>
                     {{Form::close()}}

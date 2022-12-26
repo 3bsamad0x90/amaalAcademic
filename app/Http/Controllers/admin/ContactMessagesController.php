@@ -15,12 +15,12 @@ class ContactMessagesController extends Controller
         $messages = ContactMessages::paginate(20)->sortBy('status');
         return view('AdminPanel.contactMessages.index',[
             'active' => 'contactMessages',
-            'title' => trans('common.contactMessages'),
+            'title' => 'رسائل اتصل بنا',
             'messages' => $messages,
             'breadcrumbs' => [
                 [
                     'url' => '',
-                    'text' => trans('common.contactMessages')
+                    'text' => 'رسائل اتصل بنا'
                 ]
             ]
         ]);
@@ -36,16 +36,16 @@ class ContactMessagesController extends Controller
 
         return view('AdminPanel.contactMessages.details',[
             'active' => 'contactMessages',
-            'title' => trans('common.contactMessages'),
+            'title' => 'رسائل اتصل بنا',
             'message' => $message,
             'breadcrumbs' => [
                 [
                     'url' => route('admin.contactmessages'),
-                    'text' => trans('common.contactMessages')
+                    'text' => 'رسائل اتصل بنا'
                 ],
                 [
                     'url' => '',
-                    'text' => trans('common.messageDetails')
+                    'text' => 'تفاصيل الرسالة'
                 ]
             ]
         ]);

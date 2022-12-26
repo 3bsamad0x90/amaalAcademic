@@ -14,11 +14,11 @@ class ReviewController extends Controller
         $reviews = Review::paginate(10);
         return view('AdminPanel.reviews.index', [
             'active' => 'reviews',
-            'title' => trans('common.reviews'),
+            'title' => 'التقييمات',
             'breadcrumbs' => [
                 [
                     'url' => '',
-                    'text' => trans('common.reviews')
+                    'text' => 'التقييمات'
                 ]
             ]
         ],compact('reviews'));
@@ -34,11 +34,10 @@ class ReviewController extends Controller
             $review->update();
         }
         if($review->update($data)){
-            return redirect()->back()->with('success',trans('common.successMessageText'));
+            return redirect()->back()->with('success','تم حفظ البيانات بنجاح');
         }
         else {
-            return redirect()->back()
-                            ->with('faild',trans('common.faildMessageText'));
+            return redirect()->back()->with('faild','لم نستطع حفظ البيانات');
         }
     }
 
@@ -55,11 +54,9 @@ class ReviewController extends Controller
         }
         $update = $review->update($data);
         if ($update) {
-            return redirect()->back()
-                            ->with('success',trans('common.successMessageText'));
+            return redirect()->back()->with('success','تم حفظ البيانات بنجاح');
         } else {
-            return redirect()->back()
-                            ->with('faild',trans('common.faildMessageText'));
+            return redirect()->back()->with('faild','لم نستطع حفظ البيانات');
         }
     }
     public function delete($id){

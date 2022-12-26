@@ -23,8 +23,8 @@
                 <table class="table table-bordered mb-2">
                     <thead>
                         <tr>
-                            <th class="text-center">{{ trans('common.videos') }}</th>
-                            <th class="text-center">{{ trans('common.actions') }}</th>
+                            <th class="text-center">الفيديوهات</th>
+                            <th class="text-center">الإجراءات</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,7 +41,7 @@
                             @else
                             <td class="text-center">
                                 <span class="mb-2 text-danger">
-                                    {{ trans('common.NoVideo') }}
+                                    لا يوجد فيديو
                                 </span>
                             </td>
                             @endif
@@ -67,7 +67,7 @@
                         @empty
                         <tr>
                             <td colspan="5" class="p-3 text-center ">
-                                <h2>{{trans('common.nothingToView')}}</h2>
+                                <h2>لا يوجد أي بيانات لعرضها الآن</h2>
                             </td>
                         </tr>
                         @endforelse
@@ -84,12 +84,12 @@
                         </div>
                         <div class="modal-body pb-5 px-sm-5 pt-50">
                             <div class="text-center mb-2">
-                                <h1 class="mb-1">{{trans('common.edit')}}</h1>
+                                <h1 class="mb-1">تعديل</h1>
                             </div>
                             {{Form::open(['files'=> true,'url'=>route('admin.videos.update',['id'=>$video->id]),
                             'id'=>'editvideoForm', 'class'=>'row gy-1 pt-75'])}}
                             <div class="col-12 col-md-12">
-                                <label class="form-label" for="video">{{trans('common.video')}}</label>
+                                <label class="form-label" for="video">الفيديو</label>
                                 {{Form::file('video',['id'=>'video', 'class'=>'form-control','required'])}}
                                 @if($errors->has('video'))
                                 <span class="text-danger" role="alert">
@@ -99,10 +99,10 @@
                             </div>
 
                             <div class="col-12 text-center mt-2 pt-50">
-                                <button type="submit" class="btn btn-primary me-1">{{trans('common.Save changes')}}</button>
+                                <button type="submit" class="btn btn-primary me-1"> حفظ البيانات</button>
                                 <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal"
                                     aria-label="Close">
-                                    {{trans('common.Cancel')}}
+                                    إلغاء
                                 </button>
                             </div>
                             {{Form::close()}}
@@ -138,13 +138,13 @@
             </div>
             <div class="modal-body pb-5 px-sm-5 pt-50">
                 <div class="text-center mb-2">
-                    <h1 class="mb-1">{{trans('common.CreateNew')}}</h1>
+                    <h1 class="mb-1">إضافة جديد</h1>
                 </div>
                 {{Form::open(['files'=> true,'url'=>route('admin.videos.store'), 'id'=>'createvideoForm', 'class'=>'row
                 gy-1 pt-75'])}}
 
                 <div class="col-12 col-md-12">
-                    <label class="form-label" for="video">{{trans('common.video')}}</label>
+                    <label class="form-label" for="video">الفيديو</label>
                     {{Form::file('video',['id'=>'video', 'class'=>'form-control','required'])}}
                     @if($errors->has('video'))
                     <span class="text-danger" role="alert">
@@ -154,9 +154,9 @@
                 </div>
 
                 <div class="col-12 text-center mt-2 pt-50">
-                    <button type="submit" class="btn btn-primary me-1">{{trans('common.Save changes')}}</button>
+                    <button type="submit" class="btn btn-primary me-1"> حفظ البيانات</button>
                     <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">
-                        {{trans('common.Cancel')}}
+                        إلغاء
                     </button>
                 </div>
                 {{Form::close()}}

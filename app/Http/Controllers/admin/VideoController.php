@@ -13,11 +13,11 @@ class VideoController extends Controller
         $videos = Video::paginate(10);
         return view('AdminPanel.videos.index', [
             'active' => 'videos',
-            'title' => trans('common.videos'),
+            'title' => 'الفيديوهات',
             'breadcrumbs' => [
                 [
                     'url' => '',
-                    'text' => trans('common.videos')
+                    'text' => 'الفيديوهات'
                 ]
             ]
         ],compact('videos'));
@@ -29,7 +29,7 @@ class VideoController extends Controller
             'video' => 'required|mimes:mp4,avi',
         ]);
         if(!$validator){
-            return redirect()->back()->with('faild', trans('common.faildMessageText'));
+            return redirect()->back()->with('faild', 'لم نستطع حفظ البيانات');
         }else{
             $video = new Video();
             if($request->hasFile('video')){
@@ -40,7 +40,7 @@ class VideoController extends Controller
                 $video -> video = $video_path;
             }
             $video->save();
-            return redirect()->back()->with('success',trans('common.successMessageText'));
+            return redirect()->back()->with('success','تم حفظ البيانات بنجاح');
         }
     }
 
@@ -49,7 +49,7 @@ class VideoController extends Controller
             'video' => 'required|mimes:mp4,avi',
         ]);
         if(!$validator){
-            return redirect()->back()->with('faild',trans('common.faildMessageText'));
+            return redirect()->back()->with('faild','لم نستطع حفظ البيانات');
         }else{
             $video = Video::findOrfail($id);
             // dd($video);
@@ -66,7 +66,7 @@ class VideoController extends Controller
             }
             $video->status = 1;
             $video->update();
-            return redirect()->back()->with('success',trans('common.successMessageText'));
+            return redirect()->back()->with('success','تم حفظ البيانات بنجاح');
         }
     }
 
