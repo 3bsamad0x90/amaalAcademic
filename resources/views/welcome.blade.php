@@ -1,5 +1,5 @@
 <!doctype html>
-<html dir="rtl" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html dir="{{ (App::isLocale('en') ? 'ltr' : 'rtl') }}" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 @include('frontendLayout.header')
 
