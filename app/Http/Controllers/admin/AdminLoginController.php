@@ -12,7 +12,7 @@ class AdminLoginController extends Controller
     {
         return view('AdminPanel.auth.login',[
             'active' => '',
-            'title' => trans('common.Sign in')
+            'title' => 'تسجيل الدخول'
         ]);
     }
 }

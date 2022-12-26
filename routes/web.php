@@ -17,9 +17,9 @@ Route::get('/', 'frontend\HomeController@index')->name('home');
 Route::post('storeMessage', 'frontend\HomeController@storeMessage')->name('message.store');
 
 
-Route::get('/testStripe', function () {
-    return view('stripe');
-});
+// Route::get('/testStripe', function () {
+//     return view('stripe');
+// });
 
 // Route::post('/testStripe', function () {
 //     Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));

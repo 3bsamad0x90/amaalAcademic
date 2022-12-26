@@ -8,14 +8,14 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="{{route('admin.myProfile')}}">
                         <i data-feather="user" class="font-medium-3 me-50"></i>
-                        <span class="fw-bold">{{trans('common.Account')}}</span>
+                        <span class="fw-bold">بيانات الحساب</span>
                     </a>
                 </li>
                 <!-- security -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('admin.myPassword')}}">
                         <i data-feather="lock" class="font-medium-3 me-50"></i>
-                        <span class="fw-bold">{{trans('common.Security')}}</span>
+                        <span class="fw-bold">إعدادات الأمان</span>
                     </a>
                 </li>
                 <!-- notification -->
@@ -32,7 +32,7 @@
             <!-- profile -->
             <div class="card">
                 <div class="card-header border-bottom">
-                    <h4 class="card-title">{{trans('common.Account')}}</h4>
+                    <h4 class="card-title">بيانات الحساب</h4>
                 </div>
                 <div class="card-body py-2 my-25">
                     {{Form::open(['files'=>'true','class'=>'validate-form'])}}
@@ -50,41 +50,29 @@
                         <!-- form -->
                         <div class="row pt-3">
                             <div class="col-12 col-sm-6 mb-1">
-                                <label class="form-label" for="name">{{trans('common.name')}}</label>
+                                <label class="form-label" for="name">الإسم</label>
                                 {{Form::text('name',auth()->user()->name,['id'=>'name','class'=>'form-control','required'])}}
                             </div>
                             <div class="col-12 col-sm-6 mb-1">
-                                <label class="form-label" for="userName">{{trans('common.username')}}</label>
+                                <label class="form-label" for="userName">اسم المستخدم</label>
                                 {{Form::text('userName',auth()->user()->userName,['id'=>'userName','class'=>'form-control'])}}
                             </div>
                             <div class="col-12 col-sm-4 mb-1">
-                                <label class="form-label" for="email">{{trans('common.email')}}</label>
+                                <label class="form-label" for="email">الإيميل</label>
                                 {{Form::text('email',auth()->user()->email,['id'=>'email','class'=>'form-control','required'])}}
                             </div>
 
-                            {{-- <div class="col-12 col-sm-3 mb-1">
-                                <label for="language" class="form-label">{{trans('common.language')}}</label>
-                                {{Form::select('language',[
-                                                            'ar' => trans('common.lang1Name'),
-                                                            'en' => trans('common.lang2Name'),
-                                                            'fr' => trans('common.lang3Name')
-                                                            ],auth()->user()->language,['id'=>'language','class'=>'form-control selectpicker'])}}
-                            </div> --}}
-                            {{-- <div class="col-12 col-sm-3 mb-1">
-                                <label class="form-label" for="country">{{trans('common.country')}}</label>
-                                {{Form::select('country',getCountriesList(session()->get('Lang'),'id'),auth()->user()->country,['id'=>'country','class'=>'form-control selectpicker','data-live-search'=>'true'])}}
-                            </div> --}}
                             <div class="col-12 col-sm-4 mb-1">
-                                <label class="form-label" for="phone">{{trans('common.phone')}}</label>
+                                <label class="form-label" for="phone">الموبيل</label>
                                 {{Form::text('phone',auth()->user()->phone,['id'=>'phone','class'=>'form-control'])}}
                             </div>
 
                             <div class="col-12 col-sm-4 mb-1">
-                                <label class="form-label" for="address">{{trans('common.address')}}</label>
+                                <label class="form-label" for="address">العنوان</label>
                                 {{Form::text('address',auth()->user()->address,['id'=>'address','class'=>'form-control'])}}
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary mt-1 me-1">{{trans('common.Save changes')}}</button>
+                                <button type="submit" class="btn btn-primary mt-1 me-1">حفظ التغييرات</button>
                             </div>
                         </div>
                         <!--/ form -->

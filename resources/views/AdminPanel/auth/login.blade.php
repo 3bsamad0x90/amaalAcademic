@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="loading semi-dark-layout" lang="{{trans('common.thisLang')}}" data-layout="semi-dark-layout" data-textdirection="{{trans('common.dir')}}">
+<html class="loading semi-dark-layout" lang="ar" data-layout="semi-dark-layout" data-textdirection="rtl">
 <!-- BEGIN: Head-->
 
 <head>
@@ -57,11 +57,11 @@
                         <!-- Login basic -->
                         <div class="card mb-0">
                             <div class="card-body">
-                                <a href="https://ilawfair.com" class="brand-logo">
+                                <a href="https://amaalacademy.com" class="brand-logo" target="_blank">
                                     <img src="{{asset('/AdminAssets/app-assets/images/logo/logo.png')}}" width="90%" />
                                 </a>
 
-                                <h4 class="card-title mb-1 text-center">{{trans('common.Admin Panel')}}</h4>
+                                <h4 class="card-title mb-1 text-center">لوحة التحكم</h4>
 
                                 @if(session()->get('faild') != '')
                                     <div class="alert alert-danger py-2 text-center">
@@ -71,7 +71,7 @@
                                 <form class="auth-login-form mt-2" action="{{ route('login') }}" method="POST">
                                     @csrf
                                     <div class="mb-1">
-                                        <label for="login-email" class="form-label">{{trans('common.email')}}</label>
+                                        <label for="login-email" class="form-label">الإيميل</label>
                                         <input type="text" class="form-control" id="login-email" name="email" placeholder="john@example.com" aria-describedby="login-email" tabindex="1" autofocus />
                                         @error('email')
                                             <span class="invalid-feedback" role="alert">
@@ -83,9 +83,9 @@
 
                                     <div class="mb-1">
                                         <div class="d-flex justify-content-between">
-                                            <label class="form-label" for="login-password">{{trans('common.password')}}</label>
+                                            <label class="form-label" for="login-password">كلمة المرور</label>
                                             <a href="{{route('password.request')}}">
-                                                <small>{{trans('common.Forgot Password?')}}</small>
+                                                <small>هل نسيت كلمة المرور؟</small>
                                             </a>
                                         </div>
                                         <div class="input-group input-group-merge form-password-toggle">
@@ -102,10 +102,10 @@
                                     <div class="mb-1">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="remember" id="remember-me" tabindex="3" />
-                                            <label class="form-check-label" for="remember-me"> {{trans('common.Remember Me')}} </label>
+                                            <label class="form-check-label" for="remember-me">تذكرني </label>
                                         </div>
                                     </div>
-                                    <button class="btn btn-primary w-100" tabindex="4">{{trans('common.Sign in')}}</button>
+                                    <button class="btn btn-primary w-100" tabindex="4">تسجيل الدخول</button>
                                 </form>
 
                             </div>

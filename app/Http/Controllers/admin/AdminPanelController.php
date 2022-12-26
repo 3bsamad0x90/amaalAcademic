@@ -41,7 +41,7 @@ class AdminPanelController extends Controller
     {
         return view('AdminPanel.loggedinUser.my-password',[
             'active' => 'my-password',
-            'title' => trans('common.password'),
+            'title' => 'كلمة المرور',
             'breadcrumbs' => [
                                 [
                                     'url' => '',
@@ -63,7 +63,7 @@ class AdminPanelController extends Controller
         {
             return redirect()->back()
                             ->withErrors($validator)
-                            ->with('faild',trans('common.faildMessageText'));
+                            ->with('faild','لم نستطع حفظ البيانات');
         }
         $data['password'] = bcrypt($request['password']);
 
@@ -71,10 +71,10 @@ class AdminPanelController extends Controller
 
         if ($update) {
             return redirect()->back()
-                            ->with('success',trans('common.successMessageText'));
+                            ->with('success','تم حفظ البيانات بنجاح');
         } else {
             return redirect()->back()
-                            ->with('faild',trans('common.faildMessageText'));
+                            ->with('faild','لم نستطع حفظ البيانات');
         }
 
     }
@@ -93,10 +93,10 @@ class AdminPanelController extends Controller
         $update = User::find(auth()->user()->id)->update($data);
         if ($update) {
             return redirect()->back()
-                            ->with('success',trans('common.successMessageText'));
+                            ->with('success','تم حفظ البيانات بنجاح');
         } else {
             return redirect()->back()
-                            ->with('faild',trans('common.faildMessageText'));
+                            ->with('faild','لم نستطع حفظ البيانات');
         }
 
     }
