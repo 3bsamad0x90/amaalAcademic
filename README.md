@@ -1,5 +1,5 @@
 # Amaal Academy 
-## Educational Application Website with Admin Panel
+## Educational Application Website with Multi Language
 ### Tools: (Laravel Php framework in backend and Bootstrap Framework at frontend)
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
