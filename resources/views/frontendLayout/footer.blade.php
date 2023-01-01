@@ -53,9 +53,9 @@
         <div class="container">
             <div class="copyright text-center">
                 @if(App::isLocale('en'))
-                <p>all rights reserved &copy; 2023. Impement <a href="https://technomasr.com" rel="nofollow">TechnoMasr Software</a></p>
+                <p>All Right Reserved &copy; Amaal Academy 2023. powered by <a href="https://technomasr.com" rel="nofollow">Technomasr Company</a></p>
                 @else
-                <p>كافة الحقوق محفوظة &copy; 2023. تنفيذ <a href="https://technomasr.com" rel="nofollow">تكنو مصر للبرمجيات</a></p>
+                <p> كافة الحقوق محفوظة لأكاديميه امال &copy; . تنفيذ <a href="https://technomasr.com" rel="nofollow">تكنو مصر للبرمجيات</p>
                 @endif
             </div>  <!-- copyright -->
         </div> <!-- container -->
